@@ -4,11 +4,12 @@
     <x:Property Name="in_Year" Type="InArgument(x:String)" />
     <x:Property Name="in_YearlyReportPath" Type="InArgument(x:String)" />
     <x:Property Name="out_UploadID" Type="OutArgument(x:String)" />
+    <x:Property Name="in_TransactionID" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>852.8,2212</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>852.8,2498.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_UploadReports_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -82,36 +83,36 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="System1_UploadReports" sap:VirtualizedContainerService.HintSize="492,2147.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="System1_UploadReports" sap:VirtualizedContainerService.HintSize="533.6,2433.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Upload Yearly Report" sap:VirtualizedContainerService.HintSize="450.4,2054.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="bc10691f-63a9-43c8-bc71-f65b65b00a2a" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Upload Yearly Report" sap:VirtualizedContainerService.HintSize="492,2340.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="bc10691f-63a9-43c8-bc71-f65b65b00a2a" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="416.8,1837.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence sap:VirtualizedContainerService.HintSize="458.4,2124" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,1743.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416.8,2029.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Vendor TaxID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="bc10691f-63a9-43c8-bc71-f65b65b00a2a" Text="[in_TaxID]" Version="V1">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Vendor TaxID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="375.2,52.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="bc10691f-63a9-43c8-bc71-f65b65b00a2a" Text="[in_TaxID]" Version="V1">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/upload" DesignTimeRectangle="344, 460, 606, 43" ElementType="InputBox" FriendlyName="'INPUT vendorTaxID'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="2eb8ab86-0bb1-49e0-8b3a-89fd728dbf8a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmIAAAAvCAYAAABAD6Z9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIBSURBVHhe7dq7juJQFETR+f9vgxBETkBkEwDizR1VC1swLRKanpOsJVVgY/Kta/9pAACUEGIAAEWEGABAkW8h1nVdWywWbTqdtslkYmZmZmY/WJoqbZXG+tdTiC2XyzabzdpqtWp937f1em1mZmZmP1iaKm2VxkprPRpDLJWWB/KH3W7X9vt9OxwO7Xg8mpmZmdkbS0ulqdJWaay01uPJ2BhiOTJLreXhy+XSbrebmZmZmX1gaas0VlorzTUYQyzvLzebTbter/c7AAB8Shpru91+NddgDLF8TJYjtFQbAACflcZKa6W5Bk8hdj6f71cAAHxaWutliOX9JQAAvyOtJcQAAAoIMQCAIkIMAKCIEAMAKCLEAACKCDEAgCJCDACgiBADACgixAAAiggxAIAiQgwAoIgQAwAoIsQAAIoIMQCAIkIMAKCIEAMAKCLEAACKCDEAgCJCDACgiBADACgixAAAiggxAIAiQgwAoIgQAwAoIsQAAIoIMQCAIkIMAKCIEAMAKCLEAACKCDEAgCIvQ2w6nbbT6XS/AgDg09Jaaa7BGGKLxaJ1XXe/AgDg09Jaaa7BGGL5YT6fez0JAPAL0lhprceDrzHEYrlcfj3Q9327Xq/3uwAAvCtNlbZKY6W1Hj2FWAxHZnl/mY/JzMzMzOz9palefQL2LcQAAPgfWvsLZderxlIr+e8AAAAASUVORK5CYII=" InformativeScreenshot="78242e25c40264520f757429c2e11861.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Upload Yearly Report' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
@@ -128,7 +129,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NTypeInto>
-              <uix:NClick ClickType="Single" DisplayName="Click '---'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bc10691f-63a9-43c8-bc71-f65b65b00a2a" Version="V1">
+              <uix:NClick ClickType="Single" DisplayName="Click '---'" sap:VirtualizedContainerService.HintSize="375.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bc10691f-63a9-43c8-bc71-f65b65b00a2a" Version="V1">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/upload" DesignTimeRectangle="360, 562, 226, 25" ElementType="Text" FriendlyName="'---'" FullSelectorArgument="&lt;webctrl parentid='searchForm' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='searchForm' tag='SPAN' type='' class='filter-option pull-left' aaname='---' check:innerText='---' /&gt;" Guid="62523822-b440-4bc2-a9e5-0856906af00d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOYAAAAdCAYAAAC+PxBhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACSSURBVHhe7daxDQJBEARB8s/gErhI/qMgAz6IBQ8wsHDaqJLGWb+lvQ2QI0wIEiYECROChAlBwoQgYUKQMCFImBAkTAgSJgQJE4KECUHChCBhQpAwIegd5uOYvdasz+1j7uf+vr22z2uuH3fgf8KEIK8sBAkTgoQJQcKEIGFCkDAhSJgQJEwIEiYECROChAk5M0+XdLFQ19P+dAAAAABJRU5ErkJggg==" InformativeScreenshot="b958c5e23da435b24740b0fc2a0eff0a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Upload Yearly Report' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
@@ -139,17 +140,17 @@
                   </uix:TargetAnchorable>
                 </uix:NClick.Target>
               </uix:NClick>
-              <uix:NClick ClickType="Single" DisplayName="Click '2021'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bc10691f-63a9-43c8-bc71-f65b65b00a2a" Version="V1">
+              <uix:NClick ClickType="Single" DisplayName="Click '2021'" sap:VirtualizedContainerService.HintSize="375.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bc10691f-63a9-43c8-bc71-f65b65b00a2a" Version="V1">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/upload" DesignTimeRectangle="593, 572, 10, 5" ElementType="Text" FriendlyName="'2021'" FullSelectorArgument="[String.Format(&quot;&lt;webctrl aaname='{0}' parentid='searchForm' tag='SPAN' /&gt;&quot;, in_Year)]" FuzzySelectorArgument="[String.Format(&quot;&lt;webctrl aaname='{0}' parentid='searchForm' tag='SPAN' type='' class='text' check:innerText='{0}' /&gt;&quot;, in_Year)]" Guid="e1f77e14-12bb-4794-9290-bd6123bb545a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAAdCAYAAAAzfpVwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKlSURBVFhH7Za/i+JQEMfvf0plIQgLC1dYmUarC1ecHJywsGlcrlg5WLKwhC1kiyPbpFmxSSqFI8VBDiRXSIqFLCwWgoUQOAhYCML35uWHJupq9AickA+kSN4485158+b5DidELjYrcrFZkYvNihMX6znQburgzzhwHIfCewGS7sBbhOsRrgXlkkeJbLjiOYSvHdheuBbDHSgQq+coMDuuBP5SgTUNF7cx0dAoNqBtsUmKndmQK+T0rA5ZN2ENTGh3gh+Iv7cxD83wx8BVkRKpXkHtWzB1GXWWXKUNe2lEcfUG/baAWlNFb2DB6qsQmX8mZhIaxRn30GLrXAqxk64QGK45Gj2x7wI64+Dd+V6mgBLMWfDuwypCSQnd8MdzCxIlVL6zVkkyZqb/vXAb+77w4Ogt1Og7280UYl0Y32i7PmnYSPpVBU9O5CF7caCUKRhVOokHo0mBvmjkiXhWUaNqy7/9xRhzmNcxO8KlHWAiS59VOD/lNGLfxuuL5KAM5YVe3J5fwYYehVoxeqqRnQxrvb/jLIJkuaZB6QW4fWl1Lob/Ijbq4w+doOLTYLs3KxZVaHugiKiPpUGiOVYcLXY2QueikDwQ4w6EZUsk2SfW/SX57ZQ4rOscJdaz0K4GQjuvMddHVnaii/6Y429NuLva5GCxYw2iP4paMNZP26E9Syfdeqj5Wy88Om9XNOIQsfNnBQIbLR8VOPHRtGTPNIhPk8UExjVPwXm0fmzMmO2kFuvfHiTkggLu2KpUc5ZqaN8HQuXh3nquSCeWVYZ6lDtH/aaN9sPmY4SXAqbUCmyAV8S1G0yGHSXwoviHiaNbbpuvdtdejq4EqcR6dIUy5zuexASY7v5v4DxS9dd+n3hil0KCgw/Yf0ouNitysVmRi82KExIL/AX8Bg9m7ruW8gAAAABJRU5ErkJggg==" InformativeScreenshot="deef8b57db7cc36d2cedf1a2826bca8f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Upload Yearly Report' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
                 </uix:NClick.Target>
               </uix:NClick>
-              <uix:NClick ClickType="Single" DisplayName="Click 'Select Report File'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bc10691f-63a9-43c8-bc71-f65b65b00a2a" Version="V1">
+              <uix:NClick ClickType="Single" DisplayName="Click 'Select Report File'" sap:VirtualizedContainerService.HintSize="375.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bc10691f-63a9-43c8-bc71-f65b65b00a2a" Version="V1">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/upload" DesignTimeRectangle="344, 614, 172, 43" ElementType="Text" FriendlyName="'Select Report File'" FullSelectorArgument="&lt;webctrl aaname='                                                  Select Report *' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                                                  Select Report *' tag='LABEL' type='' class='btn btn-default' check:innerText='Select Report File' /&gt;" Guid="501dfc86-4476-47de-a8b9-310e6a827077" ImageBase64="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" InformativeScreenshot="207f042884f7d11af784ccc8252fc675.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Upload Yearly Report' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
                 </uix:NClick.Target>
               </uix:NClick>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '&amp;Nome'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="bc10691f-63a9-43c8-bc71-f65b65b00a2a" Version="V1">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '&amp;Nome'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="375.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="bc10691f-63a9-43c8-bc71-f65b65b00a2a" Text="[in_YearlyReportPath]" Version="V1">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="211, 511, 446, 20" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" Guid="549b8680-4247-495f-b242-ec45d9330bfd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAcIAAAAYCAYAAABpyv24AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACASURBVHhe7dUhAcAwEMDAyXr/5GV1rGQOlgOHIiDPzBwAqDJCANLuCHf3EwHg74wQgDQjBCDNCAFIM0IA0owQgDQjBCDNCAFIM0IA0owQgDQjBCDNCAFIM0IA0owQgDQjBCDNCAFIM0IA0owQgDQjBCDNCAFIuyMEgCIjBCBszgvOedrgZU8p6AAAAABJRU5ErkJggg==" InformativeScreenshot="89ad00285b034a6db474e4de6f4d700e.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Abrir' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
@@ -160,29 +161,84 @@
                   </uix:TargetAnchorable>
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;STOP&quot;]" />
-              <uix:NClick ClickType="Single" DelayAfter="1.5" DelayBefore="3" DisplayName="Click 'Upload Report'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bc10691f-63a9-43c8-bc71-f65b65b00a2a" Version="V1">
+              <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="375.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bc10691f-63a9-43c8-bc71-f65b65b00a2a" Version="V1">
                 <uix:NClick.Target>
-                  <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/upload" DesignTimeRectangle="344, 675, 145, 43" ElementType="Button" FriendlyName="'Upload Report'" FullSelectorArgument="&lt;webctrl id='buttonUpload' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='buttonUpload' tag='BUTTON' type='button' class='btn btn-primary' aaname='Upload Report' check:innerText='Upload Report' /&gt;" Guid="f420ecd7-7cfc-4c17-abe5-0267b8247f57" ImageBase64="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" InformativeScreenshot="8c70b0fd115eaabce9d956562e622580.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Upload Yearly Report' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                  <uix:TargetAnchorable DesignTimeRectangle="987, 494, 88, 26" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' check:text='unchecked' /&gt;" Guid="db27d187-4a82-40b4-becd-b16518325399" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAeCAYAAAChf3k/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGoSURBVGhD7ZmxkYMwEEWvJxJyYhqgGRohUERKDRRBRERARBF7fIHMSoA5cyAdN/tn3owtJHnmrVgH+orjmAR/iHDPiHDPrIQnSUJlWdIwDCQ5F7iDQ7h0/VrCMaFtW6qqitI0pSiKhBPAHRzCpSvdEo6qYOLWJsLnwCWccseWcLwKcrKvAy7hlDu2hCNbC4XzINyxCL8ZhDsW4TeDcMd/Q3he69826VS2Pe+BINxxeOFadkcqM2MZqe7/SEe448DCJ7l17oxnaixBTTkfeygIdxxW+K5YFMKc+nycMX7OMXeKdfr1HiZmr3mNWlpVqDcG4Y7DC+8UZatn/ORD3hgzTwt2imHa0dieJrHzmjp/jS/F8AvCHT/nhL96fETwp4thne45WrK7Zr2HLxDu+AE93JXF1uwWTITvs3rdIYf3XOf7qhhb/VmEv0dLX2Kf+ElWXbO/Rv7cbSvSUn5LOFlXgHDHQYX/JCLcOyJc+ACEO7aEywXEtRxeQMgV27UcXrHJJfI1wB0cHl4iA0woioKapqG+74UTwB0curLBSrhwLyLcMyLcKzF9AxwGDRncY9GyAAAAAElFTkSuQmCC" InformativeScreenshot="30d885684a1a9cbaae19364431d682b5.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" />
                 </uix:NClick.Target>
               </uix:NClick>
-              <uix:NGetText DisplayName="Get Text 'Report was'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="bc10691f-63a9-43c8-bc71-f65b65b00a2a" Version="V1">
-                <uix:NGetText.Target>
-                  <uix:TargetAnchorable DesignTimeRectangle="709, 150, 520, 51" ElementType="Text" FriendlyName="'Report was'" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com diz' role='dialog' /&gt;&lt;ctrl name='Report was uploaded - confirmation id is df7f6ed09a0a0999fd68c1c*' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com diz' role='dialog' /&gt;&lt;ctrl role='text' automationid='' /&gt;" Guid="51045ee1-c4e4-490f-8a44-d06df4186e0e" InformativeScreenshot="f1b780701dca52b9506af1d730300f5a.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Upload Yearly Report - Google Chrome' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
-                </uix:NGetText.Target>
-                <uix:NGetText.Text>
-                  <OutArgument x:TypeArguments="x:String">[out_UploadID]</OutArgument>
-                </uix:NGetText.Text>
-              </uix:NGetText>
-              <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_1">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[out_UploadID]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[Split(out_UploadID, "confirmation id is")(1).ToString.Trim]</InArgument>
-                </Assign.Value>
-              </Assign>
-              <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="333.6,82.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[&quot;https://acme-test.uipath.com/work-items/&quot; + in_TaxID.ToString]" Version="V1" />
+              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="375.2,700.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Clicando em upload report&quot;]" />
+                <uix:NClick ClickType="Single" DelayAfter="1.5" DelayBefore="3" DisplayName="Click 'Upload Report'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bc10691f-63a9-43c8-bc71-f65b65b00a2a" Version="V1">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/upload" DesignTimeRectangle="344, 675, 145, 43" ElementType="Button" FriendlyName="'Upload Report'" FullSelectorArgument="&lt;webctrl id='buttonUpload' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='buttonUpload' tag='BUTTON' type='button' class='btn btn-primary' aaname='Upload Report' check:innerText='Upload Report' /&gt;" Guid="f420ecd7-7cfc-4c17-abe5-0267b8247f57" ImageBase64="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" InformativeScreenshot="8c70b0fd115eaabce9d956562e622580.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Upload Yearly Report' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NClick>
+                <uix:NGetText DisplayName="Get Text 'Report was'" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="bc10691f-63a9-43c8-bc71-f65b65b00a2a" Version="V1">
+                  <uix:NGetText.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="709, 150, 520, 51" ElementType="Text" FriendlyName="'Report was'" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com diz' role='dialog' /&gt;&lt;ctrl name='Report was uploaded - confirmation id is df7f6ed09a0a0999fd68c1c*' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com diz' role='dialog' /&gt;&lt;ctrl role='text' automationid='' /&gt;" Guid="51045ee1-c4e4-490f-8a44-d06df4186e0e" InformativeScreenshot="f1b780701dca52b9506af1d730300f5a.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Upload Yearly Report - Google Chrome' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                  </uix:NGetText.Target>
+                  <uix:NGetText.Text>
+                    <OutArgument x:TypeArguments="x:String">[out_UploadID]</OutArgument>
+                  </uix:NGetText.Text>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NGetText>
+                <Assign sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[out_UploadID]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[Split(out_UploadID, "confirmation id is")(1).ToString.Trim]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="333.6,82.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[&quot;https://acme-test.uipath.com/work-items/&quot; + in_TransactionID.ToString]" Version="V1" />
+              </Sequence>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="375.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="593.6,396.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Yearly-Report-2021- IT7…'" sap:VirtualizedContainerService.HintSize="552,304" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="bc10691f-63a9-43c8-bc71-f65b65b00a2a" Timeout="5" Version="V1">
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="249.6,85.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/upload" DesignTimeRectangle="929, 501, 182, 17" ElementType="Text" FriendlyName="'Yearly-Report-2021- IT7…'" FullSelectorArgument="&lt;webctrl id='upload-file-info' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='upload-file-info' tag='SPAN' type='' class='label label-info' aaname='Yearly-Report-2021- *.xlsx' check:innerText='Yearly-Report-2021- IT754893.xlsx' /&gt;" Guid="1d466e01-9bf0-4517-99c4-90f970b83de4" ImageBase64="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" InformativeScreenshot="9f9b9d098fe99d86a2f670799a216037.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Upload Yearly Report' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                      </uix:NCheckState.Target>
+                    </uix:NCheckState>
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
             </Sequence>
           </Sequence>
         </ActivityAction>
